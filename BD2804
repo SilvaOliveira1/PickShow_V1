@@ -1,0 +1,140 @@
+CREATE TABLE categoria (
+    id integer PRIMARY KEY not null,
+    nomeCategoria varchar(30),
+    codFuncCadastro  integer,
+    dtCadastro  DATE,
+    codFuncUltAlteracao  integer,
+    dtUltAlteracao  DATE,
+    codFuncExclusao  integer,
+    dtExlusao  DATE
+);
+
+CREATE TABLE produto (
+    id integer PRIMARY KEY not null,
+    nome varchar(40),
+    quantidade integer,
+    valor NUMERIC(15,2),
+    porcentagemDesconto NUMERIC(15,2),
+    codFuncCadastro  integer,
+    dtCadastro  DATE,
+    codFuncUltAlteracao  integer,
+    dtUltAlteracao  DATE,
+    codFuncExclusao  integer,
+    dtExlusao  DATE
+);
+
+CREATE TABLE telefone (
+    id integer PRIMARY KEY not null,
+    numero varchar,
+    codFuncCadastro  integer,
+    dtCadastro  DATE,
+    codFuncUltAlteracao  integer,
+    dtUltAlteracao  DATE,
+    codFuncExclusao  integer,
+    dtExlusao  DATE
+);
+
+CREATE TABLE endereco (
+    id integer PRIMARY KEY not null,
+    tipo varchar,
+    logradouro varchar,
+    numero integer,
+    bairro varchar,
+    cidade varchar,
+    uf varchar,
+    pais varchar(20),
+    codFuncCadastro integer,
+    dtCadastro  DATE,
+    codFuncUltAlteracao  integer,
+    dtUltAlteracao  DATE,
+    codFuncExclusao  integer,
+    dtExlusao  DATE
+);
+
+
+CREATE TABLE usuario (
+    id integer PRIMARY KEY not null,
+    nome varchar(30),
+    usuario varchar(20),
+    email varchar(30),
+    senhar varchar(20),
+    idade integer,
+    codFuncCadastro integer,
+    dtCadastro DATE,
+    codFuncUltAlteracao integer,
+    dtUltAlteracao DATE,
+    codFuncExclusao integer,
+    dtExclusao DATE
+);
+
+CREATE TABLE profissional (
+    id integer PRIMARY KEY not null,
+    CPF varchar(11),
+    codFuncCadastro  integer,
+    dtCadastro  DATE,
+    codFuncUltAlteracao  integer,
+    dtUltAlteracao  DATE,
+    codFuncExclusao  integer,
+    dtExlusao  DATE,
+    id_telefone  integer,
+    id_endereco  integer,
+    id_categoria  integer,
+    id_usuario integer,
+    foreign key (id_telefone) references telefone(id),
+    foreign key (id_endereco) references endereco(id),
+    foreign key (id_categoria) references categoria(id),
+    foreign key (id_usuario) references usuario(id)
+);
+ 
+CREATE TABLE cliente (
+    id integer PRIMARY KEY not null,
+    codFuncCadastro  integer,
+    dtCadastro  DATE,
+    codFuncUltAlteracao  integer,
+    dtUltAlteracao  DATE,
+    codFuncExclusao integer,
+    dtExclusao DATE,
+    id_profissional integer,
+    id_telefone integer,
+    id_usuario integer,
+    id_endereco integer
+    foreign key (id_telefone) references telefone(id),
+    foreign key (id_endereco) references endereco(id),
+    foreign key (id_profissional) references profissional(id),
+    foreign key (id_usuario) references usuario(id)
+);
+
+CREATE TABLE fornecedor (
+    id integer PRIMARY KEY not null,
+    CNPJ varchar(15),
+    codFuncCadastro integer,
+    dtCadastro DATE,
+    codFuncUltAlteracao integer,
+    dtUltAlteracao DATE,
+    codFuncExclusao integer,
+    dtExclusao DATE,
+    id_produto integer,
+    id_usuario integer
+    foreign key (id_usuario) references usuario(id),
+    foreign key (id_produto) references produto(id)
+);
+
+CREATE TABLE evento (
+    id integer PRIMARY KEY not null,
+    nome varchar(20),
+    data DATE,
+    codFuncCadastro integer,
+    dtCadastro DATE,
+    codFuncUltAlteracao integer,
+    dtUltAlteracao DATE,
+    codFuncExclusao integer,
+    dtExclusao DATE,
+    id_endereco integer,
+    id_cliente integer,
+    id_fornecedor integer,
+    id_profissional integer
+    foreign key (id_fonecedor) references fornecedor(id)   
+    foreign key (id_endereco) references endereco(id),
+    foreign key (id_profissional) references profissional(id),
+    foreign key (id_cliente) references cliente(id)
+);
