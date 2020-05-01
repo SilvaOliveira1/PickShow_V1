@@ -43,38 +43,38 @@
                       <a href="cadastro.html"><button type="button" class="buton1 btn btn-outline-secondary btn-lg">Cadastro de Profissional</button></a>
                       <a href="cadastro_cliente.html"><button type="button" class="buton2 btn btn-outline-info btn-lg">Cadastro de Cliente</button></a>
                     </div>
-                    <form method="POST">
+                    <form action="../../Model/processaDadosCliente.php" method="POST">
                         <!--Nome e sobrenome-->
                         <label for="exampleFormControlInput1">Nome:</label>
                         <div class="row" style="margin-bottom: 10px;">
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Nome">
+                              <input type="text" class="form-control" placeholder="Nome" name="nomeC">
                             </div>
                             
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Sobrenome">
+                              <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenomeC" >
                             </div>
                           </div>
                         <!--Email cadastro-->
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Endereço de email:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">                        
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" name="emailC">
                             <small id="emailHelp" style="margin-bottom: -5px;" class="form-text text-muted">Digite seu email pessoal.</small>
                           </div>
                         <!--Senha cadastro-->
                           <div class="form-group ">
                             <label for="exampleInputPassword1">Senha:</label>
-                            <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Senha">
+                            <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Senha" name="senhaC">
                           </div>
                         
                         <!--CPF-->
                         <div style="margin-bottom: 20px;" class="form-group">
                             <label for="exampleInputCPF">CPF</label>
-                            <input type="CPF" class="form-control" id="exampleInputCPF" aria-describedby="CPFHelp" placeholder="Seu CPF">
+                            <input type="CPF" class="form-control" id="exampleInputCPF" aria-describedby="CPFHelp" placeholder="Seu CPF" name="cpfC">
                             <small id="CPFHelp" class="form-text text-muted">Digite seu CPF.</small>
                           </div>
                         <!--Botão de cadastro-->
-                        <button type="button" class="btn btn-secondary btn-lg btn-block">Cadastrar</button>
+                        <input type="submit" class="btn btn-secondary btn-lg btn-block" value="Cadastrar">
 
                     </form>
                 </div>
