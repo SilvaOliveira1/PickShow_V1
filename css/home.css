@@ -41,11 +41,15 @@ body {
     margin: 2rem auto; }
     
   .navbar-trans {
-    margin-top: -1.3%;
-    background: transparent;
+    margin-top: -2.3%;
+    background: #151219;
     border-bottom: solid 0.1px;
+    height: 60px;
+    width: 102.5%;
+    margin-left: -1%;
     
 }
+
   
   a.navbar-brand, a.logo {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -54,6 +58,7 @@ body {
     font-weight: bold;
     margin-left: -3%;
     margin-right: 0%;
+
      }
   
   a.logo:hover, a.logo:active, a.logo:focus {
@@ -67,16 +72,14 @@ body {
   /* ==========================================================================
     background: #2b2d34 url() center;    
     ========================================================================== */
-  .cover {
-    background: #2b2d34 url("https://image5.uhdpaper.com/wallpaper-hd/true-damage-yasuo-splash-art-lol-uhdpaper.com-hd-5.1203.jpg") center; 
-    background-size: cover;
-    min-height: 50rem;
-    height: auto;
-    border-radius: 0;
-    width: 100%;
-    color: #fff;
-    padding-top: 1rem;
-    }
+    .cover {
+      background: #062f4f url("https://image5.uhdpaper.com/wallpaper-hd/true-damage-yasuo-splash-art-lol-uhdpaper.com-hd-5.1203.jpg") center; 
+      margin-left: 1%;
+      border-radius: 0;
+      width: 97.5%;
+      color: #fff;
+      padding-top: 1rem;
+      }
 
     
     
@@ -178,7 +181,7 @@ body {
 }
 .nv1{
   color: aliceblue;
-    font-size: larger;
+    font-size: x-large;
     margin-right: -9%;
     /*border-right: solid 1px;*/
     width: 18%;
@@ -194,11 +197,19 @@ a :hover{
     font-size: larger;
     margin-right: -9%;
     border-right: solid 1px;
-    border-left: solid 1px;
+    /*border-left: solid 1px;*/
     width: 18%;
-    height: 55px;
+    height: 40px;
     margin-left: -15%;
+    margin-top: -0.7%;
 }
+
+@media (max-width: 600px){
+  .nv2{
+    background-image: url("/PickShow/56763.png")
+  }
+}
+
 .divP{
   margin-top: 0.3%;
   width: 100%;
@@ -235,4 +246,104 @@ a :hover{
   .divR{
     width: 100%;
   }
+}
+/*========================================Div principal====================================*/
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 530px;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+.d1{
+  margin-top: 0.5%;
+  height: 605px;
+}
+.la{
+  margin-top: 0.5%;
+}
+.la1{
+  margin-top: 0px;
+  background-color: white;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 600px){
+  .menu ul {
+    width: 100%;
+  }
+}
+
+.menu li {
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #60323d;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #346369;
+  color: white;
+}
+
+.aside {
+  background-color: #60323d;
+  height: 78%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #60323d;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  width: 103.5%;
+  margin-left: -2%;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+/*Carousel*/
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
 }
