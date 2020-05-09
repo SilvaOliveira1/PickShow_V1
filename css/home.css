@@ -47,7 +47,10 @@ body {
     height: 60px;
     width: 102.5%;
     margin-left: -1%;
-    
+}
+@media(max-width: 600px){
+
+
 }
 
   
@@ -202,11 +205,29 @@ a :hover{
     height: 40px;
     margin-left: -15%;
     margin-top: -0.7%;
+    position: initial;
 }
 
-@media (max-width: 600px){
+@media (max-width: 780px){
   .nv2{
-    background-image: url("/PickShow/56763.png")
+    color: aliceblue;
+    font-size: medium;
+    margin-right: -2%;
+    border-right: solid 0px;
+    width: 8%;
+    height: 30px;
+    margin-left: -10%;
+    margin-top: -0.7%;
+    text-align: justify;
+  }
+}
+@media (max-width: 600px){
+  .navbar{
+        background-color: transparent;
+        display: none;
+  }
+  .nv2{
+    display: none;
   }
 }
 
@@ -267,7 +288,7 @@ html {
 }
 .d1{
   margin-top: 0.5%;
-  height: 605px;
+  height: 538px;
 }
 .la{
   margin-top: 0.5%;
@@ -304,7 +325,7 @@ html {
 
 .aside {
   background-color: #60323d;
-  height: 78%;
+  height: 91%;
   padding: 15px;
   color: white;
   text-align: center;
@@ -320,6 +341,7 @@ html {
   padding: 15px;
   width: 103.5%;
   margin-left: -2%;
+  height: 66.5px;
 }
 
 /* For desktop: */
