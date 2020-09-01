@@ -45,34 +45,40 @@
                     </div>
                     <form action="../../Model/processaDadosCliente.php" method="POST">
                         <!--Nome e sobrenome-->
-                        <label for="exampleFormControlInput1">Nome:</label>
-                        <div class="row" style="margin-bottom: 10px;">
+                        <div class="row" style="margin-bottom: 0px;">
+						<div class="col">
+                              <label for="exampleFormControlInput1">*Nome:</label>
+                            </div>
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Nome" name="nomeC">
+                              <label for="exampleFormControlInput1">*Sobrenome:</label>
+                            </div>
+							 </div>
+							<div class="row" style="margin-bottom: 10px;">
+                            <div class="col">
+                              <input type="text" class="form-control" placeholder="Digite o seu Nome..." name="nomeC" required>
                             </div>
                             
                             <div class="col">
-                              <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenomeC" >
+                              <input type="text" class="form-control" placeholder="Digite o seu Sobrenome..." name="sobrenomeC" required>
                             </div>
                           </div>
                         <!--Email cadastro-->
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Endereço de email:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" name="emailC">
-                            <small id="emailHelp" style="margin-bottom: -5px;" class="form-text text-muted">Digite seu email pessoal.</small>
-                          </div>
+                            <label for="exampleFormControlInput1">*Endereço de email:</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" name="emailC" required>
+                            </div>
                         <!--Senha cadastro-->
                           <div class="form-group ">
-                            <label for="exampleInputPassword1">Senha:</label>
-                            <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Senha" name="senhaC">
+                            <label for="exampleInputPassword1">*Senha:</label>
+                            <input type="password" class="form-control " id="exampleInputPassword1" placeholder="Digite a sua Senha..." name="senhaC" required>
                           </div>
                         
                         <!--CPF-->
                         <div style="margin-bottom: 20px;" class="form-group">
                             <label for="exampleInputCPF">CPF</label>
-                            <input type="CPF" class="form-control" id="exampleInputCPF" aria-describedby="CPFHelp" placeholder="Seu CPF" name="cpfC">
-                            <small id="CPFHelp" class="form-text text-muted">Digite seu CPF.</small>
-                          </div>
+                            <input type="CPF" class="form-control" id="exampleInputCPF" aria-describedby="CPFHelp" placeholder="Digite o seu CPF..." name="cpfC" required>
+							<p style="margin-top: 20px;">Campos obrigatórios(*)</p>
+                            </div>
                         <!--Botão de cadastro-->
                         <input type="submit" class="btn btn-secondary btn-lg btn-block" value="Cadastrar">
 
